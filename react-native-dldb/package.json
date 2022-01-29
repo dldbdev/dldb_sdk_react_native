@@ -1,0 +1,43 @@
+{
+  "name": "react-native-dldb",
+  "version": "0.9.7",
+  "description": "react native plugin for DLDB SDK",
+  "main": "index.js",
+  "files": [
+    "README.md",
+    "android",
+    "index.js",
+    "ios",
+    "react-native-dldb.podspec"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dldbdev/dldb_sdk_react_native.git"
+  },
+  "keywords": [
+    "react-native",
+    "DLDB",
+    "behaviour",
+    "analytics",
+    "location",
+    "privacy"
+  ],
+  "homepage": "https://github.com/dldbdev/dldb_sdk_react_native#readme",
+  "author": {
+    "name": "DLDB, christophe",
+    "email": "support@dldb.io"
+  },
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react": ">=16.8.1",
+    "react-native": ">=0.60.0-rc.0 <1.0.x"
+  },
+  "devDependencies": {
+    "react": "^16.9.0",
+    "react-native": "^0.61.5"
+  }
+}

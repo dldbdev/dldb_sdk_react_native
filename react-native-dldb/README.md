@@ -1,20 +1,41 @@
-# How to use DLDB SDK in react-native - react-native-dldb version 0.9.7
+# react-native-dldb
 
+## Getting started
 
-# Adding react-native-dldb to your app
-Run the following ([autolinking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md)):
-  
+`$ npm install react-native-dldb --save`
+`$ cd ios && pod install && cd ..`
+
+## Usage
+```javascript
+import dldb from 'react-native-dldb';
+
+...
+// at app start, after user consent
+dldb.init(
+    '11111111-1111-1111-1111-111111111111',
+    '{"button" : "t","batteryLevel" : "i"}'
+    );
+...
+// once per day
+dldb.heartbeat();
+...
+// on a very regular basis, when app idle ?
+dldb.runQueriesIfAny();
+...
+// wherever useful
+dldb.addEvents('{"button":"log in", "batteryLevel" : 55 }');
+// location and event
+dldb.addEventsWithLocation(
+    '{"batteryLevel" : 5 }',
+    {latitude : 45.0, longitude : 0.0, accuracy : 20}
+    );
+// location only
+dldb.addLocation(
+    {latitude : 45.0, longitude : 0.0, accuracy : 20}
+    );
 ```
-$ npm install react-native-dldb --save
-$ cd ios && pod install
-```
 
-# API
- - [Javascript APIs](/Docs/javascriptAPI.md)
- - C/C++ APIs TBC
-
-# Custom integration into react native app 
- - [custom integration of DLDB SDK](/Docs/Custom.md)
+- [Javascript APIs](/Docs/javascriptAPI.md)
 
 # About DLDB
 ## DLDB BETA VERSION
